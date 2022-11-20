@@ -14,5 +14,3 @@ La expirarea activitatii, aceasta va disparea din meniul studentilor inscrisi, i
 Front-end-ul va fi realizat cu React.js din moment ce acesta a fost prezentat la curs si seminarii.
 
 Chiar daca nu este necesar, va fi folosit Figma pentru a crea un mock-up al proiectului.
-
-Link repository github: https://github.com/balercaoctavian/TW-proiect .
