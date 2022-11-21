@@ -1,7 +1,5 @@
 Aplicație web acordarea de feedback continuu
-
 Echipa Slingshot Brothers
-
 Dinu Alexandru-Cristian & Balerca Octavian-Mihail
 
 Codul activitatii va fi introdus de catre profesor la crearea acesteia, impreuna cu celelalte atribute specificate in proiect, si va fi unic. Studentul va avea optiune de “adauga curs”, iar la introducerea codului pentru activitate, cursul va aparea in lista de cursuri active.
