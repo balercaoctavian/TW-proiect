@@ -1,5 +1,7 @@
 const express = require('express')
-const bookRouter = require('./admin-router')
+const adminRouter = require('./admin-router')
+const studentRouter=require('./students-router')
+const courseRouter=require('./courses-router')
 
 const app = express()
 
@@ -19,7 +21,15 @@ app.locals.admins = [{
 	access: 1
 }]
 
-app.use('/admin-api', bookRouter)
+app.locals.students=[]
+
+app.locals.courses=[]
+
+app.use('/admin-api', adminRouter)
+
+app.use('/students-api',studentRouter)
+
+app.use('/courses-api',courseRouter)
 
 app.use((err, req, res, next) => {
 	console.log(err)
