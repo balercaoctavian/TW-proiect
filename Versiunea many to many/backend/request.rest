@@ -1,0 +1,26 @@
+GET http://localhost:5000/users/1/courses/1
+###
+GET http://localhost:5000/courses
+###
+GET http://localhost:5000/courses/1
+
+###
+POST http://localhost:5000/courses
+Content-Type: application/json
+
+{
+    "userId": 12344,
+    "courseId": 324,
+}
+
+###
+PATCH  http://localhost:5000/courses/3
+Content-Type: application/json
+
+{
+    "durata": 453
+}
+
+###
+
+DELETE  http://localhost:5000/courses/1

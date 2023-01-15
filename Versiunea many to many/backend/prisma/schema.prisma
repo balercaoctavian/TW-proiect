@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Course{
+  courseId Int @id @default(autoincrement()) @unique
+  name String
+  desc String
+  createdAt DateTime @default(now())
+  startDate String
+  durata Int
+  pozitiv Int
+  neutru Int
+  negativ Int
+  userKey String
+  userscourses UserCourse[] @relation(name: "UserCourses1")
+}
+
+
+model User {
+  userId Int @id @unique
+  name String
+  userKey String
+  usercourses UserCourse[] @relation(name: "UserCourses2")
+}
+
+model UserCourse {
+  id       Int @default(autoincrement()) @unique
+  userId   Int @unique
+  courseId  Int @unique
+  
+  courses Course @relation(name: "UserCourses1", fields: [courseId], references: [courseId])
+  users User @relation(name: "UserCourses2", fields: [userId], references: [userId])
+  @@id([courseId, userId])
+}

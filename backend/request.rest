@@ -1,0 +1,29 @@
+GET http://localhost:5000/users/alo
+###
+GET http://localhost:5000/courses
+###
+GET http://localhost:5000/courses/1
+
+###
+POST http://localhost:5000/courses
+Content-Type: application/json
+
+{
+    "userKey": "alo",
+    "name": "course 5",
+    "desc": "asdsad",
+    "startDate": "11/11/1111 11:11",
+    "durata": 4
+}
+
+###
+PATCH  http://localhost:5000/courses/3
+Content-Type: application/json
+
+{
+    "durata": 453
+}
+
+###
+
+DELETE  http://localhost:5000/courses/1
